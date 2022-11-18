@@ -3,7 +3,7 @@ import './question.dart';
 import './main.dart';
 
 class Ans extends StatelessWidget {
-  final  VoidCallback selectHandler;
+  final  Function selectHandler;
   final String answertext;
   Ans(this.selectHandler,this.answertext);
   
@@ -13,16 +13,12 @@ class Ans extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      width: 250,
-      height: 35,  
-      margin: EdgeInsets.all(10),
+      width: double.infinity,
 
       child: ElevatedButton(
         style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(Colors.blueAccent)),
-        child: Text(answertext, /*question*/ /*question.elementAt(0)*/),
-        //onPressed:
-        //  answerthequestion
+        child: Text(answertext ),
         onPressed: selectHandler,
       ),
     );
